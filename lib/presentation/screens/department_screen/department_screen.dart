@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/widgets/core/global_text.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 
 import '../../widgets/core/arrow_back.dart';
 
@@ -10,7 +11,7 @@ class DepartmentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(text: 'Departments'),
+        title: TextBlack('Departments',fontSize: SizeManager.size20,),
         leading: ArrowBack(),
 
       ),

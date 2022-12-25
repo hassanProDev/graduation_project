@@ -31,7 +31,7 @@ class LayoutScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 4.w),
               child: myCubit.tabs[myCubit.index],
             ),
-            backgroundColor: whiteColor,
+            backgroundColor: ColorManager.whiteColor,
             bottomNavigationBar: CustomBottomNav(onTabChange: (value) {
               myCubit.changeTabs(value);
             },),

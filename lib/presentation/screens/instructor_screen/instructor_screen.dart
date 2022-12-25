@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 import '../../widgets/core/arrow_back.dart';
-import '../../widgets/core/global_text.dart';
 
 class InstructorScreen extends StatelessWidget {
   const InstructorScreen({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class InstructorScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(text: 'Instructors'),
+        title: TextBlack('Instructors',fontSize: SizeManager.size20,),
         leading: ArrowBack(),
       ),
       body: Padding(

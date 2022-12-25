@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 
 import '../../widgets/core/arrow_back.dart';
-import '../../widgets/core/global_text.dart';
 
 class RoomScreen extends StatelessWidget {
   const RoomScreen({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class RoomScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(text: 'Rooms'),
+        title: TextBlack('Rooms',fontSize: SizeManager.size20,),
         leading: ArrowBack(),
 
       ),

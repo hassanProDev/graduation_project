@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/presentation/constants.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
-
 import '../../widgets/notes/note_item.dart';
 
 class NotesScreen extends StatelessWidget {
@@ -25,7 +24,7 @@ class NotesScreen extends StatelessWidget {
           Navigator.pushNamed(context, addNotesScreen);
         },
         child: Icon(Icons.add),
-        backgroundColor: primaryColor,
+        backgroundColor: ColorManager.orangeColor,
       ),
     );
   }

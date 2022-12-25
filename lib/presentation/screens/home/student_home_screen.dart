@@ -30,7 +30,7 @@ class StudentHomeScreen extends StatelessWidget {
           Navigator.pushNamed(context,chatScreen);
         },
         child: Icon(Icons.message,),
-        backgroundColor: primaryColor,
+        backgroundColor: ColorManager.orangeColor,
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
-import 'package:graduation_project/presentation/widgets/core/global_text.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../widgets/core/arrow_back.dart';
@@ -12,7 +13,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(text: "Group Chat"),
+        title: TextBlack( "Group Chat",fontSize: SizeManager.size20,),
         leading: ArrowBack(),
       ),
       body: Padding(
@@ -33,13 +34,13 @@ class ChatScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(3.w),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: primaryColor)
+                  borderSide: BorderSide(color: ColorManager.orangeColor)
                 ),
                 suffixIcon: InkWell(
                   onTap: () {},
                   child: Icon(
                     Icons.send,
-                    color: primaryColor,
+                    color: ColorManager.orangeColor,
                   ),
                 ),
               ),

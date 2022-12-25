@@ -10,6 +10,7 @@ const String student="student";
 //global screens
 
 const String splashScreen="SplashScreen";
+const String registrationScreen='registrationScreen';
 const String layoutScreen="LayoutScreen";
 const String chatScreen="chatScreen";
 const String eventsScreen="eventsScreen";

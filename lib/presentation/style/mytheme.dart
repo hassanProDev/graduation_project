@@ -1,41 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class MyTheme {
   static final ThemeData lightTheme = ThemeData(
+      fontFamily: "Poppins",
       appBarTheme: AppBarTheme(
-        elevation: 0,
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        toolbarHeight: 15.h,
-        titleTextStyle: TextStyle(color: blackColor)
-      ),
-      scaffoldBackgroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          toolbarHeight: 15.h,
+          titleTextStyle: TextStyle(color: ColorManager.blackColor)),
+      scaffoldBackgroundColor: ColorManager.whiteColor,
       textTheme: TextTheme(
-          headline1: GoogleFonts.poppins(
-              fontSize: 15.sp,
-              color: primaryColor,
-              fontWeight: FontWeight.bold),
-          headline2: GoogleFonts.poppins(
-              fontSize: 15.sp, color: blackColor, fontWeight: FontWeight.bold),
-          headline3: GoogleFonts.poppins(
-              fontSize: 10.sp,
-              color: primaryColor,
-              fontWeight: FontWeight.bold,
+        caption: TextStyle(
+          color: ColorManager.blackColor,
+        ),
+          headline1: TextStyle(
+            color: ColorManager.darkOrangeColor,
           ),
-          headline4: GoogleFonts.poppins(
-            fontSize: 10.sp,
-            color: terkwazColor,
-            fontWeight: FontWeight.bold,
+          headline2: TextStyle(
+            color: ColorManager.orangeColor,
           ),
-          headline5: GoogleFonts.poppins(
-              fontSize: 12.sp, color: lightBink, fontWeight: FontWeight.bold),
-
-          button: GoogleFonts.poppins(
-              fontSize: 10.sp,
-              color: terkwazColor,
-              fontWeight: FontWeight.bold,
-              decoration: TextDecoration.underline)));
+          headline3: TextStyle(
+            color: ColorManager.lightOrange,
+          ),
+          headline4: TextStyle(
+            color: ColorManager.lightBink,
+          ),
+          headline5: TextStyle(
+            color: ColorManager.terkwazColor,
+          ),
+          headline6: TextStyle(
+            color: ColorManager.whiteColor,
+          )));
 }

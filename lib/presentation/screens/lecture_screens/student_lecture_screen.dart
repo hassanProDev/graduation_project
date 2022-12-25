@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/style/colors.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 import 'package:graduation_project/presentation/widgets/core/arrow_back.dart';
 import 'package:graduation_project/presentation/widgets/core/global_item.dart';
-import 'package:graduation_project/presentation/widgets/core/global_text.dart';
 import 'package:sizer/sizer.dart';
 
 class StudentLectureScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class StudentLectureScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(text: 'Lectures',size: 18.sp,textColor: blackColor,),
+        title: TextBlack('Lectures',fontSize: SizeManager.size20,),
         leading: ArrowBack(),
       ),
       body: Padding(

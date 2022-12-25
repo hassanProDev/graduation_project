@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/widgets/item_study/rich_item_text.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/style/colors.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_dark_orange.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_light_bink.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_light_orange.dart';
 import 'package:sizer/sizer.dart';
-
+import 'package:flutter_slidable/flutter_slidable.dart';
 class GlobalItem extends StatelessWidget {
   const GlobalItem({Key? key}) : super(key: key);
 
@@ -11,49 +15,40 @@ class GlobalItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 1.h),
       child: Card(
         elevation: 5,
-        child: ListTile(dense: true,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-            side: BorderSide(
-              color: Colors.black,
-            ),
-          ),
-          leading: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              RichItemText(
-                titleText: 'instractor',
-                text: 'ahmed',
+        child: Slidable(
+          key: const ValueKey(0),
+          startActionPane: ActionPane(
+            motion: const ScrollMotion(),
+            children: const [
+              SlidableAction(
+                onPressed: x,
+                backgroundColor: ColorManager.redColor,
+                foregroundColor: Colors.white,
+                icon: Icons.delete,
+                label: 'Delete',
               ),
-              RichItemText(
-                titleText: "start",
-                text: '5:00',
-              ),
-            ],
-          ),
-          title:  RichItemText(
-            titleText: "subject",
-            text: "accounting",
-          ),
-        subtitle:  RichItemText(
-          titleText: "end",
-          text: '6:30',
-        ),
-          trailing: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              RichItemText(
-                titleText: "duration",
-                text: "1:30",
-              ),
-              RichItemText(
-                titleText: 'date',
-                text: '5-1-2022',
+              SlidableAction(
+                onPressed: x,
+                backgroundColor: ColorManager.terkwazColor,
+                foregroundColor: Colors.white,
+                icon: Icons.share,
+                label: 'Share',
               ),
             ],
+          ),
+          child:  ListTile(
+            tileColor: ColorManager.lightBink,
+            leading: Icon(Icons.person,color: ColorManager.terkwazColor,size: 35.sp,),
+              title: TextDarkOrange("accounting",fontSize: SizeManager.size18,),
+            subtitle: TextDarkOrange("5-5-2022",fontSize: SizeManager.size18,),
+            trailing: TextDarkOrange("5:00 AM",fontSize: SizeManager.size18,),
           ),
         ),
       ),
     );
   }
+}
+
+void x(BuildContext c){
+
 }

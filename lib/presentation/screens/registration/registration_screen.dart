@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:graduation_project/presentation/screens/registration/signup_screen.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
-import 'package:sizer/sizer.dart';
-
 import '../../widgets/core/global_rich_text.dart';
 import 'login_screen.dart';
 
@@ -24,11 +22,11 @@ class RegistrationScreen extends StatelessWidget {
         body: Column(
           children: [
             TabBar(
-              unselectedLabelColor: blackColor,
+              unselectedLabelColor: ColorManager.blackColor,
               indicatorSize: TabBarIndicatorSize.label,
-              indicatorColor: orangeColor,
-              labelColor: primaryColor,
-              labelStyle: GoogleFonts.poppins(fontSize: 15.sp,height: 3.sp,fontWeight: FontWeight.bold),
+              indicatorColor: ColorManager.orangeColor,
+              labelColor: ColorManager.darkOrangeColor,
+              labelStyle: TextStyle(height: 3,fontSize: SizeManager.size16,fontWeight: FontWeight.bold),
               tabs: [
                 Text('Login'),
                 Text('Sign Up'),

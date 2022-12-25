@@ -15,7 +15,7 @@ class ArrowBack extends StatelessWidget {
       },
       child: Icon(
         Icons.arrow_back_ios,
-        color: primaryColor,
+        color: ColorManager.darkOrangeColor,
       ),
     );
   }

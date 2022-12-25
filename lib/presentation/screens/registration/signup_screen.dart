@@ -39,7 +39,6 @@ class SignUpScreen extends StatelessWidget {
                       CustomTextFormField(
                         controller: myCubit.userPaassword,
                         text: "Password",
-                        hasIcon: true,
                         isPassword: myCubit.isPassword,
                         iconData: myCubit.iconPasswordVisiblty,
                         onClick: () {
@@ -48,7 +47,6 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       CustomTextFormField(
                         controller: myCubit.userRePaassword,
-                        hasIcon: true,
                         text: "Re-Password",
                         isPassword: myCubit.isPassword,
                         iconData: myCubit.iconPasswordVisiblty,

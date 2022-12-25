@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
-import 'package:graduation_project/presentation/widgets/core/global_text.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 import 'package:sizer/sizer.dart';
 
 class NoteItem extends StatelessWidget {
@@ -18,13 +18,13 @@ class NoteItem extends StatelessWidget {
       ),
       elevation: 5,
       child: ListTile(
-        leading: GlobalText(
-          text: title!,
+        leading: TextBlack(
+          title!,
         ),
-        title: GlobalText(
-          text: description!,
+        title: TextBlack(
+          description!,
         ),
-        subtitle: GlobalText(text: date!,),
+        subtitle: TextBlack(date!,),
         trailing: Card(
           elevation: 8,
           shape: RoundedRectangleBorder(
@@ -33,7 +33,7 @@ class NoteItem extends StatelessWidget {
           child: InkWell(
             onTap: (){
             },
-            child: Icon(Icons.done,color: primaryColor,size: 25.sp,),
+            child: Icon(Icons.done,color: ColorManager.darkOrangeColor,size: 25.sp,),
           ),
         ),
       ),

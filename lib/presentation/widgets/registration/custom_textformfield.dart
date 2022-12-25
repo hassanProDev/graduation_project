@@ -6,9 +6,7 @@ class CustomTextFormField extends StatelessWidget {
   String? text;
   String? regexCondition;
   TextEditingController? controller;
-  bool hasIcon;
   bool isPassword;
-  bool hasRegex;
   IconData? iconData;
   Function? onClick;
 
@@ -16,10 +14,8 @@ class CustomTextFormField extends StatelessWidget {
       {this.regexCondition,
       this.text,
       this.controller,
-      this.hasIcon = false,
       this.iconData,
       this.onClick,
-      this.hasRegex = false,
       this.isPassword = false});
 
   @override
@@ -28,10 +24,10 @@ class CustomTextFormField extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 2.w),
       child: TextFormField(
         validator: (value) {
-          if (value == null||value.isEmpty) {
+          if (value == null || value.isEmpty) {
             return "Please Enter $text Currect";
           }
-          if (hasRegex) {
+          if (regexCondition != null) {
             if (!RegExp('$regexCondition').hasMatch(value)) {
               return 'your $text must be $regexCondition';
             }
@@ -41,18 +37,20 @@ class CustomTextFormField extends StatelessWidget {
         obscureText: isPassword,
         decoration: InputDecoration(
           isDense: true,
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 0, horizontal: 3.w),
           labelText: text!.toUpperCase(),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.sp),
           ),
-          suffixIcon: hasIcon
+          suffixIcon: iconData != null
               ? InkWell(
                   onTap: () {
                     onClick!();
                   },
                   child: Icon(
                     iconData,
-                    color: primaryColor,
+                    color: ColorManager.darkOrangeColor,
                   ),
                 )
               : SizedBox(),

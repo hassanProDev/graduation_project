@@ -40,7 +40,6 @@ class LoginScreen extends StatelessWidget {
                         controller: myCubit.userPaassword,
                         isPassword: myCubit.isPassword,
                         iconData: myCubit.iconPasswordVisiblty,
-                        hasIcon: true,
                         text: "Password",
                         onClick: () {
                           myCubit.passwordVisibilty();

@@ -10,6 +10,7 @@ import 'package:graduation_project/presentation/screens/lecture_screens/add_lect
 import 'package:graduation_project/presentation/screens/lecture_screens/instructor_lecture_screen.dart';
 import 'package:graduation_project/presentation/screens/lecture_screens/student_lecture_screen.dart';
 import 'package:graduation_project/presentation/screens/notes/add_note_screen.dart';
+import 'package:graduation_project/presentation/screens/registration/registration_screen.dart';
 import 'package:graduation_project/presentation/screens/section_screens/add_section_screen.dart';
 import 'package:graduation_project/presentation/screens/section_screens/instructor_sections_screen.dart';
 import 'package:graduation_project/presentation/screens/section_screens/student_section_screen.dart';
@@ -26,6 +27,8 @@ class Routers {
       case layoutScreen:
         String data = settings.arguments as String;
         return MaterialPageRoute(builder: (_) => LayoutScreen(userType: data));
+      case registrationScreen:
+        return MaterialPageRoute(builder: (_) => RegistrationScreen());
       case chatScreen:
         return MaterialPageRoute(builder: (_) => ChatScreen());
       case eventsScreen:

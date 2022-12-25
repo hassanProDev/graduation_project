@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/style/colors.dart';
+import 'package:graduation_project/presentation/style/app_sizes.dart';
+import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
 import 'package:graduation_project/presentation/widgets/core/arrow_back.dart';
-import 'package:graduation_project/presentation/widgets/core/global_text.dart';
 import 'package:graduation_project/presentation/widgets/registration/customButton.dart';
 import 'package:graduation_project/presentation/widgets/registration/custom_textformfield.dart';
 import 'package:sizer/sizer.dart';
@@ -13,9 +13,9 @@ class AddNoteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: GlobalText(
-          text: "Add Note",
-          textColor: blackColor,
+        title: TextBlack(
+           "Add Note",
+          fontSize: SizeManager.size20,
         ),
         leading: ArrowBack(),
       ),
