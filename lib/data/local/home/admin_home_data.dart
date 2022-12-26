@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/constants.dart';
+import 'package:graduation_project/data/constants.dart';
 
 import 'home_model.dart';
 

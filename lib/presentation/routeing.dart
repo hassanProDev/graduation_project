@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/constants.dart';
-import 'package:graduation_project/presentation/screens/chat/chat_screen.dart';
-import 'package:graduation_project/presentation/screens/events_screens/admin_events_screen.dart';
-import 'package:graduation_project/presentation/screens/events_screens/events_screen.dart';
-import 'package:graduation_project/presentation/screens/lab_screen/add_lab_screen.dart';
-import 'package:graduation_project/presentation/screens/lab_screen/instructor_lab_screen.dart';
-import 'package:graduation_project/presentation/screens/lab_screen/student_lab_screen.dart';
-import 'package:graduation_project/presentation/screens/lecture_screens/add_lecture_screen.dart';
-import 'package:graduation_project/presentation/screens/lecture_screens/instructor_lecture_screen.dart';
-import 'package:graduation_project/presentation/screens/lecture_screens/student_lecture_screen.dart';
-import 'package:graduation_project/presentation/screens/notes/add_note_screen.dart';
-import 'package:graduation_project/presentation/screens/registration/registration_screen.dart';
-import 'package:graduation_project/presentation/screens/section_screens/add_section_screen.dart';
-import 'package:graduation_project/presentation/screens/section_screens/instructor_sections_screen.dart';
-import 'package:graduation_project/presentation/screens/section_screens/student_section_screen.dart';
-import 'package:graduation_project/presentation/screens/splash.dart';
-import 'package:graduation_project/presentation/view/layout_screen.dart';
+import 'package:graduation_project/data/constants.dart';
+import 'package:graduation_project/presentation/screens/admin/department_screen/department_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/events_screens/admin_events_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/group_screen/group_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/instructor_screen/instructor_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/room_screen/room_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/student_screen/student_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/subject_screen/subject_screen.dart';
+import 'package:graduation_project/presentation/screens/global/chat/chat_screen.dart';
+import 'package:graduation_project/presentation/screens/global/events_screens/events_screen.dart';
+import 'package:graduation_project/presentation/screens/global/notes/add_note_screen.dart';
+import 'package:graduation_project/presentation/screens/global/registration/registration_screen.dart';
+import 'package:graduation_project/presentation/screens/global/splash.dart';
+import 'package:graduation_project/presentation/screens/global/view/layout_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/lab_screen/add_lab_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/lab_screen/instructor_lab_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/lecture_screens/add_lecture_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/lecture_screens/instructor_lecture_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/section_screens/add_section_screen.dart';
+import 'package:graduation_project/presentation/screens/instructor/section_screens/instructor_sections_screen.dart';
+import 'package:graduation_project/presentation/screens/student/lab_screen/student_lab_screen.dart';
+import 'package:graduation_project/presentation/screens/student/lecture_screens/student_lecture_screen.dart';
+import 'package:graduation_project/presentation/screens/student/section_screens/student_section_screen.dart';
 
 class Routers {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -61,7 +67,20 @@ class Routers {
         return MaterialPageRoute(builder: (_) => AdminEventsScreen());
 
         //================ admin screens =====================
-
+      case departmentScreen:
+        return MaterialPageRoute(builder: (_) => DepartmentScreen());
+      case adminEventsScreen:
+        return MaterialPageRoute(builder: (_) => AdminEventsScreen());
+      case groupScreen:
+        return MaterialPageRoute(builder: (_) => GroupScreen());
+      case subjectScreen:
+        return MaterialPageRoute(builder: (_) => SubjectScreen());
+      case instructor:
+        return MaterialPageRoute(builder: (_) => InstructorScreen());
+      case student:
+        return MaterialPageRoute(builder: (context)=>StudentScreen());
+      case roomsScreen:
+        return MaterialPageRoute(builder: (_) => RoomScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

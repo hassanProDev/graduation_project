@@ -4,8 +4,8 @@ import 'package:graduation_project/presentation/style/app_sizes.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
 import 'package:graduation_project/presentation/widgets/core/app_text/text_dark_orange.dart';
 import 'package:sizer/sizer.dart';
-class GlobalItem extends StatelessWidget {
-  const GlobalItem({Key? key}) : super(key: key);
+class InstructorItemLesson extends StatelessWidget {
+  const InstructorItemLesson({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/presentation/constants.dart';
+import 'package:graduation_project/data/constants.dart';
 import 'package:graduation_project/presentation/routeing.dart';
 import 'package:graduation_project/presentation/style/mytheme.dart';
 import 'package:sizer/sizer.dart';
