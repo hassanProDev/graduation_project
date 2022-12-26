@@ -14,16 +14,16 @@ List<HomeModel> adminItemList=[
   HomeModel(title: "room", iconData:Icons.room, onClick: (BuildContext context){
     Navigator.pushNamed(context, roomsScreen);
   }),
-  // HomeModel(title: "subject", iconData:Icons.lock_clock, onClick: (BuildContext context){
-  //   Navigator.pushNamed(context, subjectScreen);
-  // }),
+  HomeModel(title: "subject", iconData:Icons.lock_clock, onClick: (BuildContext context){
+    Navigator.pushNamed(context, subjectScreen);
+  }),
   HomeModel(title: "groups", iconData:Icons.lock_clock, onClick: (BuildContext context){
     Navigator.pushNamed(context, groupScreen);
   }),
   HomeModel(title: "departments", iconData:Icons.lock_clock, onClick: (BuildContext context){
     Navigator.pushNamed(context, departmentScreen);
   }),
-  HomeModel(title: "events", iconData:Icons.lock_clock, onClick: (BuildContext context){
-    Navigator.pushNamed(context, adminEventsScreen);
-  }),
+  // HomeModel(title: "events", iconData:Icons.lock_clock, onClick: (BuildContext context){
+  //   Navigator.pushNamed(context, adminEventsScreen);
+  // }),
 ];

@@ -69,15 +69,15 @@ class Routers {
         //================ admin screens =====================
       case departmentScreen:
         return MaterialPageRoute(builder: (_) => DepartmentScreen());
-      case adminEventsScreen:
-        return MaterialPageRoute(builder: (_) => AdminEventsScreen());
+      // case adminEventsScreen:
+      //   return MaterialPageRoute(builder: (_) => AdminEventsScreen());
       case groupScreen:
         return MaterialPageRoute(builder: (_) => GroupScreen());
       case subjectScreen:
         return MaterialPageRoute(builder: (_) => SubjectScreen());
-      case instructor:
+      case instructorScreen:
         return MaterialPageRoute(builder: (_) => InstructorScreen());
-      case student:
+      case studentScreen:
         return MaterialPageRoute(builder: (context)=>StudentScreen());
       case roomsScreen:
         return MaterialPageRoute(builder: (_) => RoomScreen());
