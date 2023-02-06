@@ -17,61 +17,69 @@ class AddStudentScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Column(
-            children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: 35.w,
-                    child: CustomTextFormField(
-                      text: "first name",
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 45.w,
+                      child: CustomTextFormField(
+                        text: "first name",
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 35.w,
-                    child: CustomTextFormField(
-                      text: "second name",
+                    SizedBox(
+                      width: 45.w,
+                      child: CustomTextFormField(
+                        text: "second name",
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 35.w,
-                    child: CustomTextFormField(
-                      text: "third name",
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 45.w,
+                      child: CustomTextFormField(
+                        text: "third name",
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 35.w,
-                    child: CustomTextFormField(
-                      text: "fourth name",
+                    SizedBox(
+                      width: 45.w,
+                      child: CustomTextFormField(
+                        text: "fourth name",
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              CustomTextFormField(
-                text: "address",
-              ),
-              CustomTextFormField(
-                text: "phone",
-              ),
-              CustomDropDownButton(
-                hint: "choose your gender",
+                  ],
+                ),
+                CustomTextFormField(
+                  text: "address",
+                ),
+                CustomTextFormField(
+                  text: "phone",
+                ),
+                CustomDropDownButton(
+                  hint: "choose your gender",
 
-                listDropDown: ["female", "male"],
-              ),
-              CustomDropDownButton(
-                hint: "chose your field study",
-                listDropDown: [
-                  "management and information systems group 1",
-                  "management and information systems group 2",
-                  "management and information systems group 3",
-                  "management and information systems group 4",
-                ],
-              ),
-            ],
+                  listDropDown: ["female", "male"],
+                ),
+                SizedBox(
+                  width: 70.w,
+                  child: CustomDropDownButton(
+                    hint: "chose your field study",
+                    listDropDown: [
+                      "management and information systems group 1",
+                      "management and information systems group 2",
+                      "management and information systems group 3",
+                      "management and information systems group 4",
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

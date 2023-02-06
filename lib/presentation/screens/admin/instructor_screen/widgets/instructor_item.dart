@@ -29,7 +29,7 @@ class InstructorItem extends StatelessWidget {
               onPressed: x,
               backgroundColor: ColorManager.terkwazColor,
               foregroundColor: Colors.white,
-              icon: Icons.share,
+              icon: Icons.edit,
               label: 'Update',
             ),
           ],

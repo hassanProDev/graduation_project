@@ -20,15 +20,16 @@ class AddInstructorScreen extends StatelessWidget {
           Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 35.w,
+                    width: 45.w,
                     child: CustomTextFormField(
                       text: "first name",
                     ),
                   ),
                   SizedBox(
-                    width: 35.w,
+                    width: 45.w,
                     child: CustomTextFormField(
                       text: "second name",
                     ),
@@ -36,15 +37,16 @@ class AddInstructorScreen extends StatelessWidget {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 35.w,
+                    width: 45.w,
                     child: CustomTextFormField(
                       text: "third name",
                     ),
                   ),
                   SizedBox(
-                    width: 35.w,
+                    width: 45.w,
                     child: CustomTextFormField(
                       text: "fourth name",
                     ),

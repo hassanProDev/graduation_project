@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomDropDownButton extends StatelessWidget {
   List<String>? listDropDown = [];
@@ -17,6 +18,14 @@ class CustomDropDownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
+      isExpanded: true,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(horizontal: 3.w,vertical: 0),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.sp),
+        ),
+        
+      ),
       validator: (value) {
         if (value == null) {
           return hintValidat;
@@ -25,7 +34,7 @@ class CustomDropDownButton extends StatelessWidget {
       hint: Text(hint!),
       items: listDropDown!
           .map((e) => DropdownMenuItem(
-                child: Text(e),
+                child: Text(e,),
                 value: e,
               ))
           .toList(),
