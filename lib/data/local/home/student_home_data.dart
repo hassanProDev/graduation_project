@@ -22,10 +22,10 @@ List<HomeModel> homeItemList = [
       onClick: (BuildContext context) {
         Navigator.pushNamed(context, studentSectionScreen);
       }),
-  HomeModel(
-      title: "events",
-      iconData: Icons.lock_clock,
-      onClick: (BuildContext context) {
-        Navigator.pushNamed(context, eventsScreen);
-      }),
+  // HomeModel(
+  //     title: "events",
+  //     iconData: Icons.lock_clock,
+  //     onClick: (BuildContext context) {
+  //       Navigator.pushNamed(context, eventsScreen);
+  //     }),
 ];

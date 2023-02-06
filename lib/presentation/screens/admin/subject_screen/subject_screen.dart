@@ -17,6 +17,7 @@ class SubjectScreen extends StatelessWidget {
       body: Padding(
         padding:  EdgeInsets.symmetric(horizontal: 8.0),
         child: ListView.builder(
+          itemCount: 1,
           itemBuilder: (context, index) => Container(),
         ),
       ),

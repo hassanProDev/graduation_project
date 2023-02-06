@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:graduation_project/presentation/screens/global/chat/widgets/message_item.dart';
 import 'package:graduation_project/presentation/style/app_sizes.dart';
 import 'package:graduation_project/presentation/style/colors.dart';
 import 'package:graduation_project/presentation/widgets/core/app_text/text_black.dart';
@@ -21,8 +22,8 @@ class ChatScreen extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 1,
-                itemBuilder: (context, index) => Container(),
+                itemCount: 2,
+                itemBuilder: (context, index) => MessageItem(isMe: index%2==0,),
               ),
             ),
             TextField(

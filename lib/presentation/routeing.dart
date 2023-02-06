@@ -3,8 +3,10 @@ import 'package:graduation_project/data/constants.dart';
 import 'package:graduation_project/presentation/screens/admin/department_screen/department_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/events_screens/admin_events_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/group_screen/group_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/instructor_screen/add_instructor_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/instructor_screen/instructor_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/room_screen/room_screen.dart';
+import 'package:graduation_project/presentation/screens/admin/student_screen/add_student_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/student_screen/student_screen.dart';
 import 'package:graduation_project/presentation/screens/admin/subject_screen/subject_screen.dart';
 import 'package:graduation_project/presentation/screens/global/chat/chat_screen.dart';
@@ -77,8 +79,12 @@ class Routers {
         return MaterialPageRoute(builder: (_) => SubjectScreen());
       case instructorScreen:
         return MaterialPageRoute(builder: (_) => InstructorScreen());
+      case addInstructorScreen:
+        return MaterialPageRoute(builder: (_) => AddInstructorScreen());
       case studentScreen:
         return MaterialPageRoute(builder: (context)=>StudentScreen());
+      case addStudentScreen:
+        return MaterialPageRoute(builder: (_) => AddStudentScreen());
       case roomsScreen:
         return MaterialPageRoute(builder: (_) => RoomScreen());
       default:
